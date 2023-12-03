@@ -1,0 +1,6 @@
+<p>main-movies-view works!</p>
+
+<div *ngFor="let item of movies">
+    <h2>{{item.title}}</h2>
+    <img [src]="item.imgCoverLink">
+</div>
