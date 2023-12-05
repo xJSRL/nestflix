@@ -1,0 +1,82 @@
+// @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
+
+.sidenav {
+  width: 250px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  overflow: hidden !important;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  padding-left: 35px;
+}
+
+.mat-toolbar.mat-primary {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: -moz-available;
+  height: 64px;
+}
+
+.mat-mdc-list-base {
+  padding: 20px;
+}
+
+.text-logo {
+  h4 {
+    font-family: 'Outfit';
+  }
+
+  .big-letter {
+    font-weight: 600;
+    font-size: 1.6em;
+  }
+}
+
+.action-button {
+  display: flex;
+  justify-content: center;
+}
+
+a.active, a:active, a:hover {
+  background: #293d46;
+  border-left: 4px solid #29776c;
+}
+a{
+  border-left: 4px solid #1e2831;
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+}
+a.text-gray{
+  color: #909599 !important;
+
+}
+.search-bar {
+  position: absolute;
+  right: 1%;
+
+
+}
+.form-control, .input-group-text {
+  background-color: unset;
+  border: unset ;
+  border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: unset;
+  color: white !important;
+}
+.form-control::placeholder{
+  color: rgb(216, 216, 216) !important;
+}
+
+@media screen and (max-width: 810px) {
+
+  .action-button,
+  .search-bar {
+    display: none;
+  }
+}

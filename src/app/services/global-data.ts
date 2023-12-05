@@ -2,6 +2,7 @@ export interface GlobalData {
 }
 
 export interface MovieData{
+    id: number;
     title: string;
     description: string;
     rating: number;

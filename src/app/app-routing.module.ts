@@ -5,7 +5,8 @@ import { MainMoviesViewComponent } from './pages/main-movies-view/main-movies-vi
 const routes: Routes = [
   {
     path: '', component: MainMoviesViewComponent
-  }
+  },
+ 
 ];
 
 @NgModule({

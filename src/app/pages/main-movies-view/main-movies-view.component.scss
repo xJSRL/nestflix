@@ -1,0 +1,30 @@
+mat-grid-tile {
+    background: lightblue;
+  }
+.spacer{
+  margin-top: 75px;
+}
+.container{
+  padding-left: 250px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.movie-content{
+  img{
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  }
+}
+.info-wrapper{
+  h3, h5 {
+    margin: 0;
+    padding: 0;
+  }
+  h3{
+    font-family: 'Palanquin Dark', sans-serif;
+  }
+  .text-muted{
+    color: #a7a7a7 !important;
+  }
+}
