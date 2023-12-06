@@ -1,0 +1,5 @@
+<div class="star-rating">
+    <ng-container *ngFor="let _ of starsArray; let i = index">
+      <span class="star" [ngClass]="{'filled': i < filledStars, 'half-filled': i === filledStars - 1 && hasHalfStar()}">&#9733;</span>
+    </ng-container>
+  </div>

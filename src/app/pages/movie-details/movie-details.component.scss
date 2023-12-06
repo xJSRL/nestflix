@@ -1,0 +1,24 @@
+.container{
+    padding-left: 250px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .img-thumbnail-container{
+    .img-thumbnail{
+        width: 90%;
+    }
+  }
+
+.movie-details-container{
+    p{
+        font-size: 16px;
+    }
+
+    .text-wrapper{
+        margin: 0;
+        padding: 0;
+        line-height: 0.7em;
+        color: #cfcfcf;
+    }
+}
