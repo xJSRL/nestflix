@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav mat-drawer-side-nav border-0" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar routerLink="/">
+      <div class="text-logo">
+        <h4><span class="big-letter">N</span>ESTFLIX</h4>
+      </div>
+    </mat-toolbar>
+
+    <mat-nav-list class="mt-5 text-white">
+      <a mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Movies</a>
+      <a mat-list-item class="text-gray" routerLink="/watchlist" routerLinkActive="active">My Watchlist</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="">
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="toggleSidenav()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      
+      <div class="col-lg-4 col-md-4 col-sm-12 p-5">
+          <h3><span class="fw-bold">M</span>ovies</h3>
+      </div>
+
+      <div class="search-bar p-5">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search..." aria-describedby="input-group-right" [(ngModel)]="searchValue" (input)="onSearch()">
+          <span class="input-group-text text-muted" id="input-group-right-example"><mat-icon>search</mat-icon></span>
+        </div>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

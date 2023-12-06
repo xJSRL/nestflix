@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Palanquin+Dark:wght@400;500&display=swap');
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body, .mat-toolbar.mat-primary{
+    color: #fff;
+    background: linear-gradient(to top right, #1f2932, #394c5a);
+    background-attachment: fixed;
+}
+.mat-drawer-inner-container{
+    background-color: #1e2831;
+}
+::root {
+    --white: #ffffff;
+    --primary-text-color: #12ae9d;
+    --bs-heading-color: var(--white);
+    --mdc-list-list-item-label-text-color: #fff;
+
+}
+.btn-pill {
+    color: #fff;
+    background-color: #209679;
+    border-radius: 30px;
+    padding: 5px 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn-primary-custom{
+    background-color: #187a5f;
+    color: var(--white);
+}
+.btn-primary-custom:hover{
+    background-color: #208a6c;
+}
+.btn-secondary-custom{
+    background-color: rgba(24, 122, 109, 0.16) ;
+    color: var(--white);
+}
+.btn-secondary-custom:hover{
+    background-color: rgba(26, 157, 140, 0.483) ;
+}
+.btn-pill:hover, .btn-pill:active{
+    background-color: #187a5f !important;
+}
+.mat-drawer-side-nav.mat-drawer-side {
+    box-shadow:none;
+    border-right-color:unset;
+    // border-right-width:1px;
+    border-right-style:solid
+  }
+  .mdc-list-item:hover .mdc-list-item__primary-text, .mdc-list-item__primary-text{
+    color: #fff !important;
+  }
+  .mdc-list-item:active,  .mdc-list-item.active {
+    color: #fff !important;
+  }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    color: #fff;
+}
+.mat-h1, .mat-headline-5, .mat-typography .mat-h1, .mat-typography .mat-headline-5, .mat-typography h1{
+    // font-family: 'Outfit', sans-serif;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+.mat-toolbar.mat-primary {
+    --mat-toolbar-container-background-color: none;
+    --mat-toolbar-container-text-color: unset;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.spacer{
+    margin-top: 75px;
+}
+
+.container{
+    padding-left: 250px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }

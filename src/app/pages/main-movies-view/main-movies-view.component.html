@@ -1,0 +1,26 @@
+<app-navigation (searchValueChanged)="onSearch($event)"></app-navigation>
+
+
+<div class="container spacer">
+    <div class="container-fluid vh-100">
+        <div class="action-container">
+            <button class="btn btn-pill me-3" (click)="sortByTitle(); toggleSortOrder()">Sort by Title</button>
+            <button class="btn btn-pill" (click)="sortByDate(); toggleSortOrder()">Sort by Date</button>
+        </div>
+
+        <div class="row mt-3 movie-content">
+            <div class="col-lg-3" *ngFor="let item of filteredMovies ? filteredMovies : movies">
+                    <img [src]="item.imgCoverLink" [alt]="item.title" class="img-fluid" [routerLink]="'/details/' + item.id">
+                <div class="ratings">
+                    <label>{{item.rating}}</label>
+                </div>
+                <div class="info-wrapper">
+                    <h3>{{item.title}}</h3>
+                    <h5>{{item.genre}}</h5>
+                    <h5 class="text-muted">Date released: {{item.releasedDate | date}}</h5>
+                </div>
+        </div>
+        </div>
+          
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<app-navigation></app-navigation>
+
+<div class="container spacer">
+    <div class="container-fluid" *ngFor="let item of movie">
+        <div class="row ">
+            <div class="col-lg-5 col-md-5 col-sm-5 d-flex justify-content-center">
+                <div class="img-thumbnail-container">
+                    <img [src]="item.imgCoverLink" [alt]="item.title" class="img-thumbnail">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <div class="movie-details-container">
+                    <h1>{{item.title}}</h1>
+                    <div class="text-wrapper">
+                        <p>{{item.releasedDate | date}}</p>
+                        <p>{{item.duration}}</p>
+                        <p>{{item.rating}}</p>
+                        <app-star-rating [rating]="item.rating"></app-star-rating>
+                    </div>
+
+                    <p class="mt-2">{{item.description}}</p>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn btn-primary-custom me-2" (click)="addToWatchlist()">Add to watchlist</button>
+                    <button class="btn btn-secondary-custom me-2" (click)="removeFromWatchlist()">Remove from watchlist</button>
+                    <button class="btn btn-secondary-custom me-2" (click)="showTrailer = !showTrailer">Watch trailer</button>
+                </div>
+
+                <div class="video-container mt-5" *ngIf="showTrailer === true">
+                    <app-video-player [trailerLink]="item.trailerLink"></app-video-player>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
