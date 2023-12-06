@@ -77,6 +77,48 @@ export class DataService {
     return this.getMovies().pipe(
       map((movies) => movies.filter((movie) => movie.id === id))
     );
-  }  
+  }
+
+  addToWatchlist(id: number) {
+    const currentWatchlistString = localStorage.getItem("watchlist");
+    let currentWatchlist: number[] = [];
+  
+    if (currentWatchlistString) {
+      try {
+        currentWatchlist = JSON.parse(currentWatchlistString);
+        if (!Array.isArray(currentWatchlist)) {
+          currentWatchlist = [];
+        }
+      } catch (error) {
+        currentWatchlist = [];
+      }
+    }
+    // check if id already exists in the localstorage
+    if (!currentWatchlist.includes(id)) {
+      currentWatchlist.push(id);
+      localStorage.setItem("watchlist", JSON.stringify(currentWatchlist));
+    }
+  }
+  
+  removeFromWatchlist(id: number) {
+    const currentWatchlistString = localStorage.getItem("watchlist");
+    let currentWatchlist: number[] = [];
+  
+    if (currentWatchlistString) {
+      try {
+        currentWatchlist = JSON.parse(currentWatchlistString);
+        if (!Array.isArray(currentWatchlist)) {
+          currentWatchlist = [];
+        }
+      } catch (error) {
+        currentWatchlist = [];
+      }
+    }
+    const indexToRemove = currentWatchlist.indexOf(id);
+    if (indexToRemove !== -1) {
+      currentWatchlist.splice(indexToRemove, 1);
+    }
+    localStorage.setItem("watchlist", JSON.stringify(currentWatchlist));
+  }
 
 }
