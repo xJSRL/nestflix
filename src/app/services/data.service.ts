@@ -22,7 +22,7 @@ export class DataService {
         genre: 'Action, Sci-Fi',
         releasedDate: new Date('2020-09-03'),
         trailerLink: 'https://www.youtube.com/watch?v=LdOM0x0XDMo',
-        imgCoverLink: '../../assets/images/movie-cover/Tenet.png'
+        imgCoverLink: 'assets/images/movie-cover/Tenet.png'
       }, 
       {
         id: 2,
@@ -33,7 +33,7 @@ export class DataService {
         genre: 'Action, Animation, Adventure',
         releasedDate: new Date('2018-12-14'),
         trailerLink: 'https://www.youtube.com/watch?v=tg52up16eq0',
-        imgCoverLink: '../../assets/images/movie-cover/Spider Man.png'
+        imgCoverLink: 'assets/images/movie-cover/Spider Man.png'
       }, 
       {
         id: 3,
@@ -44,7 +44,7 @@ export class DataService {
         genre: 'Comedy, Crime, Drama',
         releasedDate: new Date('2019-11-27'),
         trailerLink: 'https://www.youtube.com/watch?v=qGqiHJTsRkQ',
-        imgCoverLink: '../../assets/images/movie-cover/Knives Out.png'
+        imgCoverLink: 'assets/images/movie-cover/Knives Out.png'
       }, 
       {
         id: 4,
@@ -55,7 +55,7 @@ export class DataService {
         genre: 'Action, Adventure, Comedy',
         releasedDate: new Date('2014-08-01'),
         trailerLink: 'https://www.youtube.com/watch?v=d96cjJhvlMA',
-        imgCoverLink: '../../assets/images/movie-cover/Guardians of The Galaxy.png'
+        imgCoverLink: 'assets/images/movie-cover/Guardians of The Galaxy.png'
       }, 
       {
         id: 5,
@@ -66,7 +66,7 @@ export class DataService {
         genre: 'Action, Adventure, Sci-Fi',
         releasedDate: new Date('2015-05-01'),
         trailerLink: 'https://www.youtube.com/watch?v=tmeOjFno6Do',
-        imgCoverLink: '../../assets/images/movie-cover/Avengers.png'
+        imgCoverLink: 'assets/images/movie-cover/Avengers.png'
       }, 
     ]
 
