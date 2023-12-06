@@ -85,4 +85,16 @@ body, .mat-toolbar.mat-primary{
     padding-left: 250px;
     width: 100%;
     transition: all 0.5s ease;
-  }
+}
+
+@media screen and (max-width: 1000px){
+    .container{
+        padding-left: 0px;
+    }
+
+    .movie-details-container{
+        
+            // margin: 0;
+            padding: 10px;
+    }
+}
