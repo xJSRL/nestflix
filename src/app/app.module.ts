@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainMoviesViewComponent } from './pages/main-movies-view/main-movies-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { MaterialModule } from './material.module';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,11 +15,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { StarRatingComponent } from './components/star-rating/star-rating.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainMoviesViewComponent,
-    NavigationComponent
+    NavigationComponent,
+    MovieDetailsComponent,
+    VideoPlayerComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,6 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,

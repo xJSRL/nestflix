@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 import { MovieData } from './global-data';
 @Injectable({
   providedIn: 'root'
@@ -72,5 +72,11 @@ export class DataService {
 
     return of(movies);
   }
+
+  getMovieById(id: number): Observable<MovieData[]> {
+    return this.getMovies().pipe(
+      map((movies) => movies.filter((movie) => movie.id === id))
+    );
+  }  
 
 }
