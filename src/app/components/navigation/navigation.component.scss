@@ -1,5 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
-
 .sidenav {
   width: 250px;
 }
@@ -59,7 +57,7 @@ a.text-gray{
 .search-bar {
   position: absolute;
   right: 1%;
-
+  padding: 5%;
 
 }
 .form-control, .input-group-text {
@@ -74,9 +72,16 @@ a.text-gray{
 }
 
 @media screen and (max-width: 810px) {
-
+  
   .action-button,
   .search-bar {
-    display: none;
+    display: inline;
+    padding: 0;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 912px) {
+  .heading-text{
+    margin-left: 5%;
   }
 }

@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -14,7 +15,11 @@ export class NavigationComponent {
   @ViewChild('drawer') drawer!: MatSidenav;
   searchValue: string = '';
   @Output() searchValueChanged = new EventEmitter<string>();
+  currentRoute: string = '';
 
+  constructor(private router: Router){
+    this.currentRoute = this.router.url;
+  }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

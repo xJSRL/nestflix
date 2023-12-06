@@ -10,8 +10,8 @@
     </mat-toolbar>
 
     <mat-nav-list class="mt-5 text-white">
-      <a mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Movies</a>
-      <a mat-list-item class="text-gray" routerLink="/watchlist" routerLinkActive="active">My Watchlist</a>
+      <a mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleSidenav()">Movies</a>
+      <a mat-list-item class="text-gray" routerLink="/watchlist" routerLinkActive="active" (click)="toggleSidenav()">My Watchlist</a>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -26,13 +26,14 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       
-      <div class="col-lg-4 col-md-4 col-sm-12 p-5">
-          <h3><span class="fw-bold">M</span>ovies</h3>
+      <div class="col-lg-4 col-md-4 col-sm-12 heading-text">
+          <h3 *ngIf="currentRoute === '/'"><span class="fw-bold">M</span>ovies</h3>
+          <h3 *ngIf="currentRoute === '/watchlist'"><span class="fw-bold">W</span>atchlist</h3>
       </div>
 
-      <div class="search-bar p-5">
+      <div class="search-bar" *ngIf="currentRoute === '/'">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search..." aria-describedby="input-group-right" [(ngModel)]="searchValue" (input)="onSearch()">
+          <input type="text" class="form-control" placeholder="Search movies..." aria-describedby="input-group-right" [(ngModel)]="searchValue" (input)="onSearch()">
           <span class="input-group-text text-muted" id="input-group-right-example"><mat-icon>search</mat-icon></span>
         </div>
       </div>
