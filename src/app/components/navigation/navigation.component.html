@@ -10,8 +10,8 @@
     </mat-toolbar>
 
     <mat-nav-list class="mt-5 text-white">
-      <a mat-list-item routerLink="/" routerLinkActive="active">Movies</a>
-      <a mat-list-item class="text-gray">My Watchlist</a>
+      <a mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Movies</a>
+      <a mat-list-item class="text-gray" routerLink="/watchlist" routerLinkActive="active">My Watchlist</a>
     </mat-nav-list>
   </mat-sidenav>
 

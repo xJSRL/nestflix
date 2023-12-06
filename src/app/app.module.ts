@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { WatchlistComponent } from './pages/watchlist/watchlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
     NavigationComponent,
     MovieDetailsComponent,
     VideoPlayerComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    WatchlistComponent
   ],
   imports: [
     BrowserModule,

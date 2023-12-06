@@ -1,0 +1,21 @@
+<app-navigation></app-navigation>
+
+<div class="container spacer">
+    <div class="container-fluid" >
+        <div class="card mx-auto mt-2" *ngFor="let item of watchlistMovies">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center">
+                        <img class="card-img-top img-thumbnail" [src]="item.imgCoverLink" >
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <h1 class="card-title">{{item.title}}</h1>
+                        <p class="card-text">{{item.releasedDate | date: "yyyy"}}</p>
+                        <p class="card-text">{{item.description}}</p>
+                        <a [routerLink]="'/details/' + item.id" class="btn btn-primary-custom">View</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
